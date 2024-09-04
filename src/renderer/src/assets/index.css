@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    @apply h-full;
+  }
+
+  html,
+  body {
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(50, 50, 50, 0.85));
+
+    @apply select-none;
+
+    @apply bg-transparent;
+
+    @apply font-mono antialiased text-white;
+
+    @apply overflow-hidden;
+  }
+
+  header {
+    -webkit-app-region: drag;
+  }
+
+  button {
+    -webkit-app-region: no-drag;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#555] rounded-md;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
